@@ -18,6 +18,11 @@
             這裡是很多文字 {{$item}}
         @endforeach
     </p>
+
+    {{-- 可以引用子視圖 --}}
+    <div>
+        @include('tags', ['items' => ['咖啡', '美食', '高雄景點']])
+    </div>
 @endsection
 
 {{-- @push() 可以不斷堆疊而不會被覆蓋 --}}
