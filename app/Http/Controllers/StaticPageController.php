@@ -8,6 +8,6 @@ class StaticPageController extends Controller
 {
     public function index($page)
     {
-        return view("static.{$page}");
+        return view($page);
     }
 }
