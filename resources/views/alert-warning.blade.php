@@ -1,3 +1,3 @@
 <h2 style="color: #ecbf29">
-    {{ $type }} - {{ $message }}
+    {{$message}}
 </h2>

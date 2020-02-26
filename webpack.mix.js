@@ -14,3 +14,9 @@ const mix = require('laravel-mix');
 mix.js('resources/js/example.js', 'public/js')
     .sass('resources/sass/example.scss', 'public/css')
     .version();
+
+mix.webpackConfig({
+    plugins: [
+        new LiveReloadPlugin()
+    ]
+});
