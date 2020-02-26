@@ -45,11 +45,13 @@
     </div>
 @endsection
 
-{{-- 與 ＠section 不同，＠push 可以向目標不斷堆疊，來源不會重複覆蓋 --}}
-@push('li')
-    <li>cary</li>
+{{-- 與 ＠section 不同，＠push 可以向目標不斷堆疊，不會重複覆蓋。
+當不同的元件分散在不同的 blade，有可能會使用不同的 JavaScript / Styles，
+這時候透過推送到堆疊的方法就變得很有用 --}}
+@push('scripts')
+    <script src="{{ mix('js/example.js') }}"></script>
 @endpush
 
-@push('li')
-    <li>fdjkgh580@gmail.com</li>
+@push('styles')
+    <link rel="stylesheet" href="{{ mix('css/example.css') }}">
 @endpush

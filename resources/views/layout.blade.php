@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Example | @yield('title')</title>
 
-    {{-- 這是使用 JS 與 CSS 的方法 --}}
-    <script src="{{ mix('js/example.js') }}"></script>
-    <link rel="stylesheet" href="{{ mix('css/example.css') }}">
+    {{-- 這是各個版面用來堆疊 CSS 與 JS 的位置 --}}
+    @stack('styles')
+    @stack('scripts')
 </head>
 <body>
 
