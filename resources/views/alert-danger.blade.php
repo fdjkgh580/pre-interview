@@ -1,6 +1,6 @@
 <h2 style="
     color: white;
-    background: #ec413e;
+    background: #f34d69;
     padding: 1em;
     border-radius: 5px;
 ">
