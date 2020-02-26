@@ -28,7 +28,7 @@
 @endcomponent
 
 <article>
-    <p>@yield('content')</p>
+    @yield('content')
 </article>
 
 <hr>

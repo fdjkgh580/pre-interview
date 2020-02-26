@@ -13,9 +13,11 @@
 
 {{-- 文章內容 --}}
 @section('content')
-    @foreach(range(0, 20) as $item)
-        這裡是很多文字 {{$item}}
-    @endforeach
+    <p>
+        @foreach(range(0, 20) as $item)
+            這裡是很多文字 {{$item}}
+        @endforeach
+    </p>
 @endsection
 
 {{-- @push() 可以不斷堆疊而不會被覆蓋 --}}
