@@ -1,8 +1,18 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 body {
     background: #009688;
     color: #fff;
 }
 
 * {
+    font-family: 'Noto Sans TC';
     box-sizing: border-box;
+}
+
+.logo {
+    display: inline-block;
+    background-image: url('images/logo-light.svg');
+    width: 130px;
+    height: 36px;
 }

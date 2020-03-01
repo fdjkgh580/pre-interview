@@ -30,6 +30,7 @@
         @endslot
     @endcomponent
 
+    <img src="{{ asset('images/logo-light.svg') }}" alt="">
     <p>
         {{-- 循環 20 次 --}}
         @foreach(range(1, 20) as $item)
