@@ -1,5 +1,5 @@
 export default class {
     static example(){
-        return 1000;
+        return 'Hello World';
     }
 }

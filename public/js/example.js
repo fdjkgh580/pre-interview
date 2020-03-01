@@ -29910,7 +29910,7 @@ function () {
   _createClass(_default, null, [{
     key: "example",
     value: function example() {
-      return 1000;
+      return 'Hello World';
     }
   }]);
 

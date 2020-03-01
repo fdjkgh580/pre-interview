@@ -12,6 +12,7 @@
     @stack('scripts')
 </head>
 <body>
+<i class="logo"></i>    
 
 {{-- 定義麵包屑的位置 --}}
 <div>
