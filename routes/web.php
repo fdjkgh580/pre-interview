@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('guideline');
 });
 
 Route::get('example', 'ExampleController@index');
 
 Route::get('static/{page}', 'StaticPageController@index');
+
+

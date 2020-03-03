@@ -1,0 +1,38 @@
+// Framework grid generation
+
+.iw_container
+  margin: 0 auto
+  width: 100%
+  padding: 0 ($grid-gutter-width / 2)
+  
+  @include breakpoint-min(md)
+    max-width: 800px
+  @include breakpoint-min(lg)
+    max-width: 1200px
+
+
+
+  .row
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-right: -10px
+    margin-left: -10px
+
+
+  .col
+    width: 100%
+    padding-left: $column-gutter
+    padding-right: $column-gutter
+
+
+  // col-1 ~ col-12
+  @for $i from 1 through $grid-columns
+    @include breakpoint-min(md)
+      .col-#{$i}
+        flex: 0 0 (100 / ($grid-columns/ $i)) * 1%
+
+
+
+
+

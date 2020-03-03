@@ -1,0 +1,15 @@
+//-- 文字超出寬度顯示... --//
+@mixin ellipsis
+  /*加寬度width屬性来兼容部分瀏覽*/
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+
+//-- 文字超出幾行顯示... --//
+@mixin ellipsis-multi($line: 2)
+  display: -webkit-box
+  -webkit-line-clamp: $line
+  -webkit-box-orient: vertical
+  overflow: hidde
+  text-overflow: ellipsis
