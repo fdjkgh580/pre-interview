@@ -1,0 +1,79 @@
+//--  bg variant --//
+@mixin bg-color($theme-color)
+  background: $theme-color
+
+@mixin bg-darken($theme-color)
+  background: darken($theme-color, 5%)
+
+@mixin colors($outline-colors)
+  color: $outline-colors
+
+
+
+//-- button variants --//
+// Button status -- default
+@mixin button-variant($background, $hover-background)
+  color: $cl-basic-0
+  @include bg-color($background)
+  &:hover
+    @include bg-darken($hover-background)
+
+  &.disabled,
+  &:disabled
+    background: $cl-basic-100
+    cursor: not-allowed
+    color: $cl-basic-300
+    &:hover
+      background: $cl-basic-100
+    .svg
+      path
+        fill: $cl-basic-300
+
+
+// Button status -- outline
+@mixin button-outline-variant($colors)
+  @include colors($colors)
+  border: 1px solid $cl-basic-200
+  background: $cl-basic-0
+  &:hover
+    background: $cl-basic-100
+
+  &.disabled,
+  &:disabled
+    border: 1px solid $cl-basic-100
+    cursor: not-allowed
+    color: $cl-basic-300
+    &:hover
+      background: $cl-basic-0
+    .svg
+      path
+        fill: $cl-basic-300
+
+
+// Buttonn status -- ghost
+@mixin button-ghost-variant($colors)
+  @include colors($colors)
+  background: $cl-basic-0
+  &:hover
+    background: $cl-basic-100
+
+  &.disabled,
+  &:disabled
+    cursor: not-allowed
+    color: $cl-basic-300
+    &:hover
+      background: $cl-basic-0
+    .svg
+      path
+        fill: $cl-basic-300
+
+
+
+// Button sizes
+@mixin button-size($btn-height, $padding-y, $padding-x, $border-radius, $font-size, $line-height)
+  height: $btn-height
+  padding: $padding-y $padding-x
+  border-radius: $border-radius
+  font-size: $font-size
+  line-height: $line-height
+  font-weight: 600

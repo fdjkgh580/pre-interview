@@ -1,0 +1,12 @@
+// Label
+
+
+@mixin label($colors)
+  color: $colors
+  @include border-radius(4px)
+  padding: 0 8px
+  @include inline-flex()
+
+
+@mixin label-bg($background)
+  background: $background

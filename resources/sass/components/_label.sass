@@ -1,0 +1,8 @@
+@each $color,$value in $label-color
+  .label-#{$color}
+    @include label($value)
+
+
+@each $color,$value in $label-background 
+  .label-#{$color}
+    @include label-bg($value)

@@ -1,0 +1,8 @@
+//-- 陰影 box-shadow --//
+// 100: box-shadow: 0 1px 4px rgba($cl-basic-900, 0.1)
+// 200: box-shadow: 0 2px 8px rgba($cl-basic-900, 0.2)
+// 300: box-shadow: 0 4px 16px rgba($cl-basic-900, 0.3)
+// 400: box-shadow: 0 8px 32px rgba($cl-basic-900, 0.4)
+
+@mixin box-shadow($offset-y, $blur-radius, $shadow-color, $opacity)
+  box-shadow: 0 $offset-y $blur-radius rgba($shadow-color, $opacity)

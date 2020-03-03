@@ -1,0 +1,23 @@
+//-- media breakpoints mixin --//
+// width: 1220px 820px 380px
+
+@mixin breakpoint-min($breakpoints)
+  $raw-query: map-get($grid-breakpoints, $breakpoints)
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+    @media screen and (min-width: #{$query})
+      @content
+  @else
+    @content
+
+
+
+
+@mixin breakpoint-max($breakpoints)
+  $raw-query: map-get($grid-breakpoints, $breakpoints)
+  @if $raw-query
+    $query: if(type-of($raw-query) == 'string', unquote($raw-query), inspect($raw-query))
+    @media screen and (max-width: #{$query})
+      @content
+  @else
+    @content

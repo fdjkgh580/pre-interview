@@ -1,0 +1,30 @@
+//-- Forms --//
+
+// checkbox
+@mixin checkbox($background)
+  input
+    &:hover::before
+      box-shadow: 0 0 0 3px rgba($background, 0.2)
+
+    &:checked::before
+      background: $background
+      border: 1px solid $background
+
+    &:indeterminate::before
+      background: $background
+      border: 1px solid $background
+
+
+
+// radio
+@mixin radio($background, $checked-bg: darken($background, 8%))
+  input
+    &:hover::before
+      box-shadow: 0 0 0 3px rgba($background, 0.2)
+
+    &:checked::before
+      background: $background
+      border: 1px solid $background
+
+    &:checked::after
+      box-shadow: 0 0 6px rgba($checked-bg, 0.5)
