@@ -1,3 +1,6 @@
 # Pre-interview
 
-目前用作切版使用5
+## API Document
+- [API 文件參考](http://domain/apidoc/)
+- 開發使用 zircote/swagger-php version 3
+ 
