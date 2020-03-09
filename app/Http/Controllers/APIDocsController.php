@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 /**
  * @OA\Info(title="面試趣 APIs Document", version="0.1")
+ * @OA\Server(url="/api/v1/", description="第一版伺服器位置")
  */
 class APIDocsController extends Controller
 {
