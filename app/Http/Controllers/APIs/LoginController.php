@@ -13,7 +13,7 @@ class LoginController extends Controller
 {
     /**
      * @OA\GET(
-     *     path="/api/login/{platform}",
+     *     path="/login/{platform}",
      *     summary="取得平台登入的導向網址",
      *     tags={"login"},
      *     @OA\Parameter(
@@ -44,6 +44,6 @@ class LoginController extends Controller
      */
     public function show(string $platform)
     {
-        return "{$platform} 登入網址";
+        return ['status' => 'success'];
     }
 }

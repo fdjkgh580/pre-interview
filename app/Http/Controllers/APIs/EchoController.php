@@ -9,7 +9,7 @@ class EchoController extends Controller
 {
     /**
      * @OA\GET(
-     *     path="/api/echo",
+     *     path="/echo",
      *     summary="取得回音",
      *     tags={"echo"},
      *     @OA\Response(response="200", description="ok")
@@ -24,7 +24,7 @@ class EchoController extends Controller
 
     /**
      * @OA\POST(
-     *     path="/api/echo",
+     *     path="/echo",
      *     summary="取得回音",
      *     tags={"echo"},
      *     @OA\Response(response="200", description="ok")
@@ -39,7 +39,7 @@ class EchoController extends Controller
 
     /**
      * @OA\PUT(
-     *     path="/api/echo",
+     *     path="/echo",
      *     summary="取得回音",
      *     tags={"echo"},
      *     @OA\Response(response="200", description="ok")
@@ -54,7 +54,7 @@ class EchoController extends Controller
 
     /**
      * @OA\DELETE(
-     *     path="/api/echo",
+     *     path="/echo",
      *     summary="取得回音",
      *     tags={"echo"},
      *     @OA\Response(response="200", description="ok")
