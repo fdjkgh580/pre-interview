@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get(
 );
 
 // 提供給 swagger 所需要的數據
-Route::get('get-api-document', 'APIDocsController@getJSON');
+Route::get('api-document-content', 'APIDocsController@getJSON');
 
 Route::get('login/{platform}', 'APIs\LoginController@show');
 

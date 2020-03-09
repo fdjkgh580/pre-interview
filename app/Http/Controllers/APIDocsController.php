@@ -14,4 +14,18 @@ class APIDocsController extends Controller
         $swagger = \OpenApi\scan(app_path('Http/Controllers/'));
         return response()->json($swagger, 200);
     }
+
+    /**
+     * 訪問 Swagger UI
+     * 為了避免線上訪問，因此鎖定在本機
+     */
+    public function index()
+    {
+        $env = config('app.env');
+        if ($env !== "local") {
+            abort(403);
+        }
+
+        return view('api-document');
+    }
 }

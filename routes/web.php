@@ -19,4 +19,4 @@ Route::get('example', 'ExampleController@index');
 
 Route::get('static/{page}', 'StaticPageController@index');
 
-
+Route::get('api-document', 'APIDocsController@index');
