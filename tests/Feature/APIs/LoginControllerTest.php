@@ -13,5 +13,6 @@ class LoginControllerTest extends TestCase
         $response = $this->json("get", "/api/v1/login/facebook");
         $response->assertStatus(200);
         $response->assertJsonStructure(['status']);
+        $this->assertTrue(false);
     }
 }

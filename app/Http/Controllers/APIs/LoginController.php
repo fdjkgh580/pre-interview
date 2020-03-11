@@ -15,7 +15,7 @@ class LoginController extends Controller
      * @OA\GET(
      *     path="/login/{platform}",
      *     summary="取得平台登入的導向網址",
-     *     tags={"login"},
+     *     tags={"Login"},
      *     @OA\Parameter(
      *         name="platform",
      *         in="path",

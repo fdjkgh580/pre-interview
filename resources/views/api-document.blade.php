@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Swagger UI</title>
-    <base href="{{ url('/') }}">
+    <base href="{{ url('/api-document') }}/">
     <link rel="stylesheet" type="text/css" href="/apidoc/swagger-ui.css">
     <link rel="icon" type="image/png" href="/apidoc/favicon-32x32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="/apidoc/favicon-16x16.png" sizes="16x16"/>
@@ -44,6 +44,8 @@
             url: "/api/v1/api-document-content",
             dom_id: '#swagger-ui',
             deepLinking: true,
+            // 這行可以預設不打開
+            docExpansion: 'none',
             presets: [
                 SwaggerUIBundle.presets.apis,
                 SwaggerUIStandalonePreset
