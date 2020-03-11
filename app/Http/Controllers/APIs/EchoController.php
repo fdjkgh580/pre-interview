@@ -11,7 +11,7 @@ class EchoController extends Controller
      * @OA\GET(
      *     path="/echo",
      *     summary="取得回音",
-     *     tags={"echo"},
+     *     tags={"Echo"},
      *     @OA\Response(response="200", description="ok")
      * )
      * @param Request $request
@@ -26,7 +26,7 @@ class EchoController extends Controller
      * @OA\POST(
      *     path="/echo",
      *     summary="取得回音",
-     *     tags={"echo"},
+     *     tags={"Echo"},
      *     @OA\Response(response="200", description="ok")
      * )
      * @param Request $request
@@ -41,7 +41,7 @@ class EchoController extends Controller
      * @OA\PUT(
      *     path="/echo",
      *     summary="取得回音",
-     *     tags={"echo"},
+     *     tags={"Echo"},
      *     @OA\Response(response="200", description="ok")
      * )
      * @param Request $request
@@ -56,7 +56,7 @@ class EchoController extends Controller
      * @OA\DELETE(
      *     path="/echo",
      *     summary="取得回音",
-     *     tags={"echo"},
+     *     tags={"Echo"},
      *     @OA\Response(response="200", description="ok")
      * )
      * @param Request $request
