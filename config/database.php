@@ -47,6 +47,18 @@ return [
             ]
         ],
 
+        'old_interview' => [
+            'driver'   => 'mongodb',
+            'host'     => env('DB_HOST', 'localhost'),
+            'port'     => env('DB_PORT', 27017),
+            'database' => env('OLD_INTERVIEW', 'database'),
+            'username' => '',
+            'password' => '',
+            'options'  => [
+                'database' => '',
+            ]
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
