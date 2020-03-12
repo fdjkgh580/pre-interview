@@ -1,0 +1,124 @@
+// Size: Small
+@mixin sz-small
+  @media screen and (max-width: 739px)
+    @content
+
+// Size: Medium
+@mixin sz-medium
+  @media screen and (min-width: 740px) and (max-width: 1099px)
+    @content
+
+// Size: Large
+@mixin sz-large
+  @media screen and (min-width: 1100px)
+    @content
+
+
+
+
+
+// ------------------------- //
+// footer
+// ------------------------- //
+.iw_footer-outer
+  background-color: $cl-basic-100
+  padding: 28px 0
+  font-size: 12px
+  color: $cl-basic-700
+  a
+    font-size: 12px
+
+  .iw_footer-inner
+    @include flex(space-between, center)
+    @include sz-medium
+      align-items: flex-end
+    @include sz-small
+      display: block
+
+  .iw_footer-link-wrap
+    @include flex(flex-start, center)
+    @include sz-medium
+      flex-direction: column
+      align-items: flex-start
+    @include sz-small
+      flex-direction: column
+      align-items: flex-start
+
+    .iw_footer-logo
+      margin-right: 40px
+      img
+        height: 18px
+      @include sz-medium
+        margin-bottom: 8px
+      @include sz-small
+        margin-right: 0
+        margin-bottom: 20px
+
+    ul
+      @include flex(flex-start, center)
+      @include sz-small
+        margin-bottom: 24px
+      li
+        line-height: 1em
+        border-right: 1px solid $cl-basic-700
+        padding: 0 12px
+        &:last-child
+          border-right: 0
+          margin-right: 0
+        @include sz-medium
+          padding: 0 8px 0 0
+          margin-right: 8px
+        @include sz-small
+          padding: 0 8px 0 0
+          margin-right: 8px
+          &:last-child
+            border-right: 0
+            margin-right: 0
+
+  .iw_footer-copyright
+    span
+      margin-right: 12px
+      @include sz-small
+        display: block
+        margin-right: 0
+        margin-bottom: 8px
+
+
+
+
+
+
+
+// ------------------------- //
+// nav
+// ------------------------- //
+.iw_nav-outer
+  @include flex(space-between, center)
+  padding: 20px 32px
+
+  // .iw_nav-logo
+
+  .iw_nav-login
+    border-radius: 16px
+    padding: 4px 16px
+    transition: all .2s ease-in-out
+    background: rgba($cl-basic-0, .2)
+    &:hover,
+    &:active
+      background: rgba($cl-basic-0, .6)
+
+
+  .iw_nav-link-wrap
+    @include flex(center, center)
+    li
+      margin: 0 4px
+    a
+      font-weight: 600
+      color: $cl-basic-0
+      background-color: transparent
+      transition: all .2s ease-in-out
+      border-radius: 16px
+      padding: 4px 16px
+      &:hover,
+      &:active
+        background-color: $cl-warning-500

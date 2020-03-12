@@ -9,7 +9,7 @@ input[type="checkbox"]
   margin-right: 8px
 
 
-.checkbox-layout
+.iw_checkbox-layout
   @include inline-flex(flex-start, center)
   label
     cursor: pointer
@@ -44,10 +44,10 @@ input[type="checkbox"]
 
 
 @each $colors, $value in $checkbox-colors
-  .checkbox-#{$colors}
+  .iw_checkbox-#{$colors}
     @include checkbox($value)
 
-    &.disabled
+    &.iw_disabled
       color: $cl-basic-300
       cursor: not-allowed
       input

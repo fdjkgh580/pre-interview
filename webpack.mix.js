@@ -1,5 +1,5 @@
-const mix = require('laravel-mix');
-const LiveReloadPlugin = require('webpack-livereload-plugin');
+const mix = require("laravel-mix");
+const LiveReloadPlugin = require("webpack-livereload-plugin");
 
 /*
   |--------------------------------------------------------------------------
@@ -12,14 +12,27 @@ const LiveReloadPlugin = require('webpack-livereload-plugin');
   |
 */
 
-mix.js('resources/js/example.js', 'public/js')
-  .js('resources/js/app.js', 'public/js')
-  .sass('resources/sass/example.scss', 'public/css')
-  .sass('resources/sass/guideline.sass', 'public/css')
-  .version();
+mix.js("resources/js/example.js", "public/js")
+    .js("resources/js/app.js", "public/js")
+    .sass("resources/sass/example.scss", "public/css")
+    .sass("resources/sass/guideline.sass", "public/css")
+    .sass("resources/sass/index.sass", "public/css")
+    .options({
+        autoprefixer: {
+            options: {
+                browsers: ["last 6 versions"]
+            }
+        }
+    })
+    .version();
 
-mix.webpackConfig({
-  plugins: [
-      new LiveReloadPlugin()
-  ]
+// mix.webpackConfig({
+//   plugins: [
+//       new LiveReloadPlugin()
+//   ]
+// });
+
+// https://browsersync.io/docs/options/
+mix.browserSync({
+    proxy: "http://localhost:8000/static/"
 });

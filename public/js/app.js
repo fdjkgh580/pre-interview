@@ -97,6 +97,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./svg */ "./resources/js/svg.js");
 /* harmony import */ var _svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_svg__WEBPACK_IMPORTED_MODULE_0__);
+// img to svg
 
 
 /***/ }),
@@ -145,7 +146,7 @@ jQuery('img.svg').each(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/tzuwenmao/Desktop/interview_v2/www/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/jovilee/Desktop/0-pi-work/interview/www/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

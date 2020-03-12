@@ -1,0 +1,96 @@
+// ------------------------- //
+// 精選文章
+// ------------------------- //
+// Card
+.iw_blog-item-card-container
+  @include index-grid(3, 20px)
+  margin-bottom: 20px
+
+  @include sz-medium
+    display: flex
+    transform: translateX(calc((100% - 740px) / 2))
+
+
+  .iw_blog-item-card
+    @include border-radius(12px)
+    background-color: $cl-basic-0
+    box-shadow: 0px 8px 32px 0px rgba($cl-basic-300, 0.4)
+    overflow: hidden
+    cursor: pointer
+    transition: box-shadow .2s ease-in-out
+    &:hover,
+    &:active
+      box-shadow: 0px 8px 32px 0px rgba($cl-basic-500, 0.4)
+
+    @include sz-medium
+      max-width: 340px
+      height: 312px
+      margin-right: 8px
+
+  .iw_blog-item-card__image
+    height: 196px
+
+  .iw_blog-item-card__con
+    padding: 16px 24px
+
+    .iw_blog-item-card__title
+      font-size: 16px
+      font-weight: 600
+      height: 48px
+      line-height: 24px
+      letter-spacing: 0px
+      margin-bottom: 12px
+      @include ellipsis-multi(2)
+
+    .iw_blog-item-card__tag
+      font-size: 12px
+      font-weight: normal
+      color: $cl-basic-700
+      letter-spacing: 0px
+      height: 24px
+      line-height: 24px
+      span
+        margin-right: 8px
+
+// List
+.iw_blog-item-list-container
+  @include index-grid(3, 20px)
+  grid-gap: 12px 20px
+  @include sz-medium
+    @include index-grid(2, 0px)
+
+  @include sz-small
+    @include index-grid(1, 0px)
+
+
+  .iw_blog-item-list
+    min-width: 0
+  .iw_blog-item-list__link
+    color: $cl-basic-900
+    background-color: transparent
+    transition: background .2s ease-in-out
+    padding: 8px 16px
+    border-radius: 12px
+    @include flex(flex-start, center)
+    &:hover,
+    &:active
+      background-color: $cl-basic-50
+      box-shadow: 0px 8px 32px 0px rgba($cl-basic-300, 0.4)
+    .svg
+      margin-right: 8px
+      flex: 0 0 18px
+      path
+        fill: #212121
+    span
+      display: inline-block
+      width: calc(100% - 30px)
+      @include ellipsis 
+
+
+
+    &.iw_gomore
+      color: $cl-basic-700
+      svg
+        path
+          fill: $cl-basic-700
+

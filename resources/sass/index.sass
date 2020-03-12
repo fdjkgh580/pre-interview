@@ -1,0 +1,91 @@
+@import 'basic/basic'
+@import 'layout/layout'
+
+@import 'pages/index/index-mixin'
+@import 'pages/index/video'
+@import 'pages/index/site-status'
+@import 'pages/index/feature'
+@import 'pages/index/hot-item'
+@import 'pages/index/blog'
+@import 'pages/index/school'
+@import 'pages/index/stage'
+
+
+
+
+
+
+.iw_overflow-outer
+  width: 100%
+  padding-top: 20px
+  overflow: hidden
+  overflow-x: scroll
+  -webkit-overflow-scrolling: touch
+  @media screen and (min-width: 741px)
+    @include flex(center, flex-start)
+    overflow: hidden
+    padding: 0 10px
+
+  .iw_overflow-inner
+    // Medium
+    @media screen and (max-width: 740px)
+      width: 1000px
+      -webkit-overflow-scrolling: touch
+    @include sz-small
+      width: 1000px
+      -webkit-overflow-scrolling: touch
+    // Large
+    @media screen and (min-width: 64em)
+      margin: 0 auto
+      width: calc(100% - 20px)
+      padding: 0 10px
+      max-width: 1080px
+  
+
+
+
+
+// ------------------------- //
+// 共同
+// ------------------------- //
+body
+  background-color: $cl-basic-50
+.iw_mini-title
+  font-size: 14px
+  line-height: 28px
+  letter-spacing: 4px
+  font-weight: 600
+  text-transform: uppercase
+
+.iw_title-header
+  @include flex(space-between, center)
+  margin-bottom: 20px
+
+.iw_title_header-link-wrap
+  @include flex(flex-end, center)
+  .iw_arrow-btn
+    margin-left: 8px
+
+.iw_arrow-btn
+  width: 32px
+  height: 32px
+  padding: 0
+  color: $cl-basic-700
+  border: 1px solid $cl-basic-300
+  border-radius: 16px
+  background-color: transparent
+  @include flex(center, center)
+  .svg
+    width: 18px
+    path
+      fill: $cl-basic-700
+
+.iw_more-link
+  @include flex(center, center)
+  height: 32px
+  color: $cl-basic-700
+  border: 1px solid $cl-basic-300
+  border-radius: 16px
+  padding: 0 20px
+
+

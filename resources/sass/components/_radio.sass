@@ -9,7 +9,7 @@ input[type="radio"]
   margin-right: 8px
 
 
-.radio-layout
+.iw_radio-layout
   label
     cursor: pointer
     @include inline-flex(flex-start, center)
@@ -39,10 +39,10 @@ input[type="radio"]
 
 
 @each $colors, $value in $checkbox-colors
-  .radio-#{$colors}
+  .iw_radio-#{$colors}
     @include radio($value)
 
-    &.disabled
+    &.iw_disabled
       color: $cl-basic-300
       cursor: not-allowed
       input

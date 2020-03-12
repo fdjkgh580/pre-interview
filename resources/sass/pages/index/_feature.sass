@@ -1,0 +1,55 @@
+// ------------------------- //
+// 面試趣六大理念
+// ------------------------- //
+.iw_feature-outer
+  background-color: $cl-primary-50
+  text-align: center
+  padding: 100px 0 120px
+  .iw_mini-title
+    text-align: center
+    color: $cl-primary-500
+  .fz-h3
+    text-align: center
+    margin-bottom: 60px
+
+// Feature Card Container
+.iw_feature-card-container
+  @include index-grid(3, 20px)
+
+  @include sz-medium
+    @include index-grid(2, 20px)
+
+  @include sz-small
+    @include index-grid(1, 12px)
+
+.iw_feature-card
+  @include flex(center, center)
+  flex-direction: column
+  height: 378px
+  padding: 0 32px
+  background-color: $cl-basic-0
+  @include border-radius(12px)
+  .svg
+    margin-bottom: 20px
+
+  .fz-h6
+    margin-bottom: 8px
+
+  .iw_feature-intro
+    line-height: 2rem
+    margin-bottom: 8px
+    color: $cl-basic-700
+
+    span
+      display: block
+
+  .iw_feature-link
+    color: $cl-primary-500
+    @include flex(center, center)
+    .svg
+      margin-left: 8px
+      margin-bottom: 0
+      width: 18px
+      path
+        fill: $cl-primary-500
+

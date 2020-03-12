@@ -2,17 +2,17 @@
 
 .iw_container
   margin: 0 auto
-  width: 100%
+  width: calc(100% - 20px)
   padding: 0 ($grid-gutter-width / 2)
   
   @include breakpoint-min(md)
-    max-width: 800px
+    max-width: 740px
   @include breakpoint-min(lg)
-    max-width: 1200px
+    max-width: 1080px
 
 
 
-  .row
+  .iw_row
     display: flex
     align-items: flex-start
     flex-wrap: wrap
@@ -20,7 +20,7 @@
     margin-left: -10px
 
 
-  .col
+  .iw_col
     width: 100%
     padding-left: $column-gutter
     padding-right: $column-gutter
@@ -29,7 +29,7 @@
   // col-1 ~ col-12
   @for $i from 1 through $grid-columns
     @include breakpoint-min(md)
-      .col-#{$i}
+      .iw_col-#{$i}
         flex: 0 0 (100 / ($grid-columns/ $i)) * 1%
 
 

@@ -29987,15 +29987,39 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 /***/ }),
 
+/***/ "./resources/sass/guideline.sass":
+/*!***************************************!*\
+  !*** ./resources/sass/guideline.sass ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/index.sass":
+/*!***********************************!*\
+  !*** ./resources/sass/index.sass ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*********************************************************************!*\
-  !*** multi ./resources/js/example.js ./resources/sass/example.scss ***!
-  \*********************************************************************/
+/*!*********************************************************************************************************************************!*\
+  !*** multi ./resources/js/example.js ./resources/sass/example.scss ./resources/sass/guideline.sass ./resources/sass/index.sass ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/resources/js/example.js */"./resources/js/example.js");
-module.exports = __webpack_require__(/*! /var/www/resources/sass/example.scss */"./resources/sass/example.scss");
+__webpack_require__(/*! /Users/jovilee/Desktop/0-pi-work/interview/www/resources/js/example.js */"./resources/js/example.js");
+__webpack_require__(/*! /Users/jovilee/Desktop/0-pi-work/interview/www/resources/sass/example.scss */"./resources/sass/example.scss");
+__webpack_require__(/*! /Users/jovilee/Desktop/0-pi-work/interview/www/resources/sass/guideline.sass */"./resources/sass/guideline.sass");
+module.exports = __webpack_require__(/*! /Users/jovilee/Desktop/0-pi-work/interview/www/resources/sass/index.sass */"./resources/sass/index.sass");
 
 
 /***/ })

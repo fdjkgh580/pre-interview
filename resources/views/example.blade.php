@@ -11,6 +11,7 @@
   </head>
   <body>
     <h1>Example</h1>
+    <p>loremfefefefef</p>
       {{ 123 }}
     
   </body>

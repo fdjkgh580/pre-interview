@@ -1,0 +1,63 @@
+// ------------------------- //
+// 站內即時
+// ------------------------- //
+.iw_site-status-outer
+  padding: 80px 0
+.iw_site-status-container
+  @include index-grid(3, 20px)
+  @include sz-large
+    @include index-grid(3, 20px)
+
+  @include sz-medium
+    @include index-grid(2, 20px)
+    grid-template-rows: auto auto
+    justify-items: center
+
+  @include sz-small
+    @include index-grid(1, 8px)
+
+  .iw_site-status__info
+    background-color: $cl-basic-0
+    border-radius: 12px
+    padding: 12px 20px
+    @include flex(center, flex-start)
+    flex-direction: column
+    h4
+      @include flex(center, center)
+      font-weight: 400
+    .svg
+      margin-right: 8px
+      width: 16px
+    &:nth-child(1)
+      background-color: transparent
+    &:nth-child(2)
+      h4
+        color: $cl-primary-500
+        .svg
+          path
+            fill: $cl-primary-500
+    &:nth-child(3)
+      h4
+        color: $cl-danger-500
+        .svg
+          path
+            fill: $cl-danger-500
+
+  .iw_site-status__info-count
+    font-size: 36px
+
+  .iw_site-status__info:nth-child(1)
+    @include sz-medium
+      grid-column: 1 / -1
+  .iw_site-status__info:nth-child(2)
+    @include sz-medium
+      grid-column: 1 / 2
+      grid-row: 2 / 3
+      justify-self: stretch
+      align-items: center
+  .iw_site-status__info:nth-child(3)
+    @include sz-medium
+      grid-column: 2 / -1
+      grid-row: 2 / 3
+      justify-self: stretch
+      align-items: center

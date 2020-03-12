@@ -1,0 +1,160 @@
+// ------------------------- //
+// 分類找公司，熱門關鍵字
+// ------------------------- //
+.iw_stage-outer
+  background-color: $cl-basic-50
+  padding: 120px 0
+
+.iw_stage-container
+  margin-bottom: 80px
+  @include index-grid(12, 20px)
+
+  @include  sz-small
+    display: flex
+    flex-direction: column
+
+  .iw_stage__header
+    padding: 0 20px
+    @include sz-medium
+      width: 50%
+      margin: 0 auto
+    .iw_mini-title
+      @include sz-medium
+        text-align: center
+
+// Left
+.iw_company-catalog-outer
+  grid-column: span 7
+  @include sz-medium
+    grid-column: 1 / -1
+    
+
+  .iw_company-catalog-inner
+    padding: 0px 24px
+    border: 1px solid $cl-basic-200
+    border-radius: 12px
+    margin-top: 16px
+
+// Right
+.iw_hotlist-outer
+  grid-column: 9 / -1
+  @include sz-medium
+    grid-column: 1 / -1
+    margin-bottom: 80px
+    order: -1
+
+  @include  sz-small
+    order: -1
+    margin-bottom: 40px
+
+  .iw_hotlist-inner
+    padding: 20px
+    border: 1px solid $cl-basic-200
+    border-radius: 12px
+    margin-top: 16px
+    ul
+      @include  sz-medium
+        @include index-grid(2, 60px)
+        grid-gap: 0 60px
+
+// Left Content
+.iw_industry-wrap
+  @include flex(flex-start, flex-start)
+  padding: 20px 0
+  border-bottom: 1px solid $cl-basic-200
+  &:last-child
+    border-bottom: none
+  .iw_link
+    color: $cl-basic-700
+
+  .iw_industry__title
+    margin-right: 30px
+    margin-top: 2px
+    font-weight: 600
+  .iw_industry__content
+    flex: 1
+    @include flex(flex-start, flex-start)
+    flex-wrap: wrap
+    .iw_link
+      flex: 0 0 25%
+      text-align: center
+      line-height: 28px
+      margin-bottom: 2px
+      border-radius: 16px
+      background-color: transparent
+      transition: background .2s ease-in-out
+      &:hover,
+      &:active
+        background-color: $cl-basic-100
+        color: $cl-basic-900
+
+// Right Content
+.iw_hotlist-outer
+  .iw_stage__header
+    @include flex(space-between, center)
+    position: relative
+    .iw_arrow-btn
+      border: none
+
+  .iw_mini-title
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -37px
+
+.iw_hotlist-inner
+  .iw_hotlist__link
+    padding: 10px 0
+    @include flex(space-between, center)
+    transition: color .2s ease-in-out,
+    &:hover,
+    &:active
+      .iw_hotlist__link-name
+        color: $cl-basic-900
+      .iw_hotlist__link-count
+        color: $cl-basic-700
+
+  .iw_hotlist__link-name
+    color: $cl-basic-700
+    @include ellipsis
+    flex: 1
+  .iw_hotlist__link-count
+    color: $cl-basic-500
+    flex: 0 0 100px
+    text-align: right
+
+
+
+
+// ------------------------- //
+// 熱門關鍵字
+// ------------------------- //
+.iw_hot-links-outer
+  .iw_mini-title
+    margin-bottom: 16px
+    padding: 0 20px
+    @include sz-medium
+      text-align: center
+
+  .iw_hot-links-wrap
+    padding: 16px 20px 4px
+    border: 1px solid $cl-basic-200
+    border-radius: 12px
+    @include flex(flex-start, flex-start)
+    flex-wrap: wrap
+    a
+      color: $cl-basic-700
+      transition: color .2s ease-in-out
+      position: relative
+      padding-left: 10px
+      margin: 0 12px 12px 0
+      &:before
+        content: "#"
+        display: inline-block
+        position: absolute
+        left: 0
+        top: 0
+
+      &:hover,
+      &:active
+        color: $cl-basic-900

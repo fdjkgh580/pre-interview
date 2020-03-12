@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, , user-scalable=0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	{{-- 取消行動版 safari 自動偵測數字成電話號碼 --}} 
@@ -22,11 +22,9 @@
 	@yield('content')
 
 	@include('layout.footer')
-	
+
 	<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
 
 	@stack('scripts')
-
 </body>
-
 </html>
