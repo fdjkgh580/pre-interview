@@ -1,6 +1,8 @@
 @foreach ($items as $item)
   <div class="iw_blog-item-card">
-    <div class="iw_blog-item-card__image" style='background-image: url({{$item['imgSrc']}})'></div>
+    <div class="iw_blog-item-card__image" '>
+      <img src='{{$item['imgSrc']}}' />
+    </div>
     <div class="iw_blog-item-card__con">
       <div class="iw_blog-item-card__title">
         {{$item['title']}}

@@ -22,7 +22,7 @@
 // ------------------------- //
 .iw_footer-outer
   background-color: $cl-basic-100
-  padding: 28px 0
+  padding: 28px 0 calc(28px + env(safe-area-inset-bottom)) 0
   font-size: 12px
   color: $cl-basic-700
   a
@@ -49,7 +49,9 @@
       img
         height: 18px
       @include sz-medium
-        margin-bottom: 8px
+        // margin-bottom: 8px
+        margin-bottom: 16px
+
       @include sz-small
         margin-right: 0
         margin-bottom: 20px
@@ -66,8 +68,8 @@
           border-right: 0
           margin-right: 0
         @include sz-medium
-          padding: 0 8px 0 0
-          margin-right: 8px
+          padding: 0 12px 0 0
+          margin-right: 12px
         @include sz-small
           padding: 0 8px 0 0
           margin-right: 8px
@@ -78,10 +80,12 @@
   .iw_footer-copyright
     span
       margin-right: 12px
-      @include sz-small
+      // @include sz-small
+      @media screen and (max-width: 340px)
         display: block
         margin-right: 0
         margin-bottom: 8px
+      
 
 
 

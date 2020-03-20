@@ -1,5 +1,5 @@
 @foreach($items as $item)
-  <div class='iw_hot-item-card'>
+  <div class='iw_hot-item-card' data-hash='zero'>
     <div class='iw_hot-item-card__header'>
       <span class='iw_hot-item-card__tag'>{{$item['tag']}}</span>
     </div>

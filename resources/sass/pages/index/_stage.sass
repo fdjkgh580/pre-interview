@@ -4,6 +4,8 @@
 .iw_stage-outer
   background-color: $cl-basic-50
   padding: 120px 0
+  @include sz-small
+    padding: 60px 0 40px
 
 .iw_stage-container
   margin-bottom: 80px
@@ -12,6 +14,7 @@
   @include  sz-small
     display: flex
     flex-direction: column
+    margin-bottom: 40px
 
   .iw_stage__header
     padding: 0 20px
@@ -38,6 +41,8 @@
 // Right
 .iw_hotlist-outer
   grid-column: 9 / -1
+  display: flex
+  flex-direction: column
   @include sz-medium
     grid-column: 1 / -1
     margin-bottom: 80px
@@ -48,6 +53,9 @@
     margin-bottom: 40px
 
   .iw_hotlist-inner
+    flex: 1
+    display: flex
+    align-items: center
     padding: 20px
     border: 1px solid $cl-basic-200
     border-radius: 12px
@@ -56,11 +64,17 @@
       @include  sz-medium
         @include index-grid(2, 60px)
         grid-gap: 0 60px
+    li
+      height: 48px
+      margin: 4px 0
+    a
+      height: 48px
+
 
 // Left Content
 .iw_industry-wrap
   @include flex(flex-start, flex-start)
-  padding: 20px 0
+  padding: 20px 0 16px
   border-bottom: 1px solid $cl-basic-200
   &:last-child
     border-bottom: none
@@ -69,24 +83,31 @@
 
   .iw_industry__title
     margin-right: 30px
-    margin-top: 2px
+    margin-top: 4px
     font-weight: 600
   .iw_industry__content
     flex: 1
     @include flex(flex-start, flex-start)
     flex-wrap: wrap
+
+    // 
+    &.iw_for-city
+      @include sz-small
+        .iw_link
+          flex: 0 0 33.33%
     .iw_link
       flex: 0 0 25%
-      text-align: center
-      line-height: 28px
-      margin-bottom: 2px
-      border-radius: 16px
+      font-weight: 400
+      margin-bottom: 4px
       background-color: transparent
       transition: background .2s ease-in-out
       &:hover,
       &:active
         background-color: $cl-basic-100
         color: $cl-basic-900
+      @include sz-small
+        flex: 0 0 50%
+
 
 // Right Content
 .iw_hotlist-outer
@@ -137,17 +158,19 @@
       text-align: center
 
   .iw_hot-links-wrap
-    padding: 16px 20px 4px
+    padding: 16px 20px
     border: 1px solid $cl-basic-200
     border-radius: 12px
     @include flex(flex-start, flex-start)
     flex-wrap: wrap
     a
+      font-size: 12px
+      line-height: 24px
       color: $cl-basic-700
       transition: color .2s ease-in-out
       position: relative
       padding-left: 10px
-      margin: 0 12px 12px 0
+      margin: 0 12px 0px 0
       &:before
         content: "#"
         display: inline-block

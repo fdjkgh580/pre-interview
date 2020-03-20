@@ -3,24 +3,43 @@
 // ------------------------- //
 .iw_hot-item-outer
   padding: 160px 0
-  // @include sz-small
-  //   position: relative
+  @include sz-small
+    padding: 60px 0
 
   .iw_overflow-outer
     margin-bottom: 160px
+    flex-direction: column
+    
     &.iw_for-hot-item
-      @include sz-large
-        height: 440px
       @include sz-medium
-        height: 380px
+        height: 420px
+        padding-top: 20px
+        &::-webkit-scrollbar
+          display: none
       @include sz-small
-        height: 260px
+        height: 500px
+        padding-top: 20px
+        margin-bottom: 60px
+        &::-webkit-scrollbar
+          display: none
+
     &.iw_for-blog
-      height: 360px
+      // height: 360px
       margin-bottom: 0
+      padding-top: 20px
+      padding-bottom: 45px
+      @include sz-medium
+        &::-webkit-scrollbar
+          display: none
+      @include sz-small
+        height: 324px
+        &::-webkit-scrollbar
+          display: none
 
   .iw_title-header
-    margin-bottom: 20px
+    .iw_title_header-link-wrap
+      @include sz-small
+        display: none
   .iw_mini-title
     color: $cl-primary-500
   .iw_more-link
@@ -40,15 +59,13 @@
 
 
 .iw_hot-item-card-container
-  @include index-grid(3, 20px)
   @include sz-large
     margin-bottom: 0
   @include sz-medium
-    transform: translateX(calc((100% - 740px) / 2))
+    // transform: translateX(calc((100% - 740px) / 2 + 10px))
     margin-bottom: 0
   @include sz-small
-    display: flex
-    margin-bottom: 0
+    padding-left: 20px
 
   .iw_hot-item-card
     cursor: pointer
@@ -59,23 +76,15 @@
     transition: box-shadow .2s ease-in-out
     min-width: 0
     @include sz-medium
-      width: 340px
+      // width: 340px
       min-width: initial
-      margin-right: 8px
     @include sz-small
-      width: 260px
+      // width: 260px
       min-width: initial
-      margin-right: 8px
     &:hover,
     &:active
       box-shadow: 0px 8px 32px 0px rgba($cl-basic-500, 0.4)
 
-    &:nth-child(4),
-    &:nth-child(5),
-    &:nth-child(6)
-      .iw_hot-item-card__tag
-        color: $cl-warning-600
-        background-color: $cl-warning-50
     .iw_hot-item-card__header
       margin-bottom: 12px
       padding: 0 20px
@@ -110,9 +119,7 @@
       margin-top: 16px
       padding: 12px 20px 0
       border-top: 1px solid $cl-basic-100
-      @include sz-small
-        flex-direction: column
-        align-items: flex-start
+
 
     .iw_hot-item-card__info
       @include flex(flex-start, center)
@@ -120,7 +127,13 @@
       .iw_hot-item-card__info-detail
         color: $cl-basic-700
         &.iw_danger
-          color: $cl-danger-500
+          color: $cl-danger-700
+    .iw_hot-item-card__info:nth-child(1)
+      @include sz-small
+        flex: 0 0 60%
+    .iw_hot-item-card__info:nth-child(2)
+      @include sz-small
+        flex: 0 0 40%
 
     .fz-t3
       color: $cl-basic-900

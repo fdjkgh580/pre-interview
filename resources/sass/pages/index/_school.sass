@@ -4,39 +4,13 @@
 .iw_school-images-outer
   padding: 120px 0
   background-color: $cl-basic-0
+  @include sz-small
+    padding: 60px 0 40px
   .iw_mini-title
     text-align: center
     margin-bottom: 40px
-  .iw_overflow-outer:nth-child(1)
-    .iw_school-image-list
-      @include sz-medium
-        transform: translateX(8%)
-      @include sz-small
-        transform: translateX(8%)
 
-  .iw_overflow-outer:nth-child(2)
-    .iw_school-image-list
-      @include sz-medium
-        transform: translateX(-8%)
-      @include sz-small
-        transform: translateX(-8%)
+
 
   .iw_school-image-list
     margin-bottom: 40px
-    @include flex(center, center)
-    width: 100%
-    @include sz-medium
-      width: 120%
-    @include sz-small
-      width: 200%
-    li
-      flex: 1
-      @include flex(center, center)
-      padding: 20px
-    
-    img
-      height: 100px
-      max-width: initial
-      // width: 100%
-
-

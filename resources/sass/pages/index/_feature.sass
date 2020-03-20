@@ -5,12 +5,16 @@
   background-color: $cl-primary-50
   text-align: center
   padding: 100px 0 120px
+  @include sz-small
+    padding: 60px 0 40px
   .iw_mini-title
     text-align: center
     color: $cl-primary-500
   .fz-h3
     text-align: center
     margin-bottom: 60px
+    @include sz-small
+      margin-bottom: 20px
 
 // Feature Card Container
 .iw_feature-card-container
@@ -28,7 +32,12 @@
   height: 378px
   padding: 0 32px
   background-color: $cl-basic-0
+  box-shadow: 0px 8px 32px 0px rgba($cl-primary-100, 0.4)
   @include border-radius(12px)
+
+  @include sz-small
+    height: initial
+    padding: 32px
   .svg
     margin-bottom: 20px
 
@@ -39,6 +48,8 @@
     line-height: 2rem
     margin-bottom: 8px
     color: $cl-basic-700
+    @include sz-small
+      display: none
 
     span
       display: block

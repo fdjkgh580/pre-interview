@@ -1,0 +1,89 @@
+.iw_for-hot-item
+  @media screen and (min-width: 1100px)
+    max-width: 1080px
+    margin: 0 auto 160px
+  
+  @media screen and (max-width: 740px)
+    transform: translateX(calc((100% - 740px) / 2 + 10px))
+  @include sz-small
+    transform: none
+
+
+
+.iw_hot-item-card
+  margin-bottom: 20px
+
+
+
+
+// ---------------------------- //
+// overwrite owl carousel style
+// ---------------------------- //
+
+// ----- hot item card ----- //
+.iw_hot-item-card-container.owl-carousel
+  @include sz-large
+    transform: translateX(-25px)
+
+  .owl-stage-outer
+    @include sz-large
+      width: calc(100% + 60px)!important
+      padding-left: 30px
+    @include sz-medium
+      padding-left: 20px
+      transform: translateX(-10px)
+
+  .owl-stage
+    .owl-item 
+      @include sz-large
+        opacity: 0
+        transition: opacity .2s ease-in
+      @include sz-medium
+        opacity: 1
+        transition: opacity .2s ease-in
+
+    .owl-item.active 
+      @include sz-large
+        opacity: 1
+      @include sz-medium
+        opacity: 1
+        &.owl-item
+          opacity: 1
+// ----- hot item card ----- //
+
+
+
+.iw_for-owl-carousel
+  @media screen and (max-width: 1099px) and (min-width: 740px)
+    padding-left: calc((100vw - 740px) / 2)
+
+.owl-carousel
+  .owl-stage
+    @media screen and (max-width: 1099px) and (min-width: 740px)
+      padding-left: 0!important
+    // @include sz-small
+      // padding-left: 0!important
+
+
+  .owl-item
+    img
+      width: max-content
+      display: inline-block
+
+
+.iw_for-owl-carousel
+  .owl-carousel
+    .owl-stage
+      padding: 20px 0
+  .owl-carousel:nth-child(2)
+    margin-top: -35px
+
+
+.iw_owl-school-img-wrap
+  margin: 0 auto
+  max-width: 1080px
+  width: calc(100% - 20px)
+  padding: 0 ($grid-gutter-width / 2)
+  @include sz-medium
+    width: 100%
+    max-width: 100%

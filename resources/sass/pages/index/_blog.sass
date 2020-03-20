@@ -1,6 +1,15 @@
 // ------------------------- //
 // 精選文章
 // ------------------------- //
+
+.iw_title_header-link-wrap
+  &.iw_for-blog
+    @include sz-large
+      display: none
+    @include sz-small
+      display: none
+
+
 // Card
 .iw_blog-item-card-container
   @include index-grid(3, 20px)
@@ -8,7 +17,11 @@
 
   @include sz-medium
     display: flex
-    transform: translateX(calc((100% - 740px) / 2))
+    transform: translateX(calc((100vw - 740px) / 2))
+    transition: all .2s ease-in-out
+  @include sz-small
+    transform: translateX(20px)
+    width: calc(260px * 3 + (20px * 2))!important
 
 
   .iw_blog-item-card
@@ -23,12 +36,14 @@
       box-shadow: 0px 8px 32px 0px rgba($cl-basic-500, 0.4)
 
     @include sz-medium
-      max-width: 340px
+      width: 340px
       height: 312px
-      margin-right: 8px
+      margin-right: 12px
+    @include sz-small
+      width: 260px
 
   .iw_blog-item-card__image
-    height: 196px
+    // max-height: 196px
 
   .iw_blog-item-card__con
     padding: 16px 24px
@@ -67,6 +82,7 @@
     min-width: 0
   .iw_blog-item-list__link
     color: $cl-basic-900
+    line-height: 28px
     background-color: transparent
     transition: background .2s ease-in-out
     padding: 8px 16px
@@ -87,8 +103,8 @@
       @include ellipsis 
 
 
-
-    &.iw_gomore
+  .iw_blog-item-list:last-child
+    .iw_blog-item-list__link
       color: $cl-basic-700
       svg
         path
